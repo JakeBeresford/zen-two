@@ -1,0 +1,26 @@
+// ------------------------------
+// LISTS
+// ------------------------------
+
+ol,
+ul {
+    margin: 0 0 1.3rem 2.5rem;
+
+    li {
+        margin: 0 0 0.2rem;
+        line-height: $line-height * 1.2;
+    }
+
+    ol,
+    ul {
+        margin: 0.1rem 0 0.2rem 2rem;
+    }
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ul {
+    list-style-type: disc;
+}

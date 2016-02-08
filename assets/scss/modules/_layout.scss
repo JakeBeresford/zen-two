@@ -1,0 +1,49 @@
+// ------------------------------
+// MAIN LAYOUT
+// ------------------------------
+
+main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 22.5rem;
+    padding: 2rem 3rem;
+
+    > .content {
+        margin: 0 3.7rem;
+        padding: 2rem 0;
+
+        > h1 {
+            margin-bottom: 2.7rem;
+        }
+
+        > footer {
+            display: block;
+            padding: 2em 0 0;
+            color: lighten($gray-dark, 10%);
+            font-size: 0.7em;
+            border-top: 2px solid $gray-light;
+        }
+    }
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: $total-width - $gutter-width;
+}
+
+.copyright {
+    display: block;
+    margin-bottom: 0.7em;
+
+    a {
+        color: lighten($gray-dark, 5%);
+        text-decoration: underline;
+
+        &:hover {
+            color: $hover-color;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+// ------------------------------
+// BASICS
+// ------------------------------
+
+html {
+    height: 100%;
+    max-height: 100%;
+    font-size: $unit;
+    -webkit-font-smoothing: antialiased;
+
+    &.expanded {
+        overflow-y: hidden;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: $gray-darker;
+    font-family: $sans-font;
+}
+
+mark {
+    background: saturate($secondary-color, 60%);
+}
+
+::selection {
+    background: lighten($secondary-color, 26%);
+}
+
+:scrollbar {
+    display: none;
+}
+
+hr {
+    border: 0;
+}

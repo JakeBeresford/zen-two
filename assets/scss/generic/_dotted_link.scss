@@ -1,0 +1,17 @@
+%dotted-link {
+    padding: 0.1rem 0.25rem;
+    line-height: 25px;
+    border-bottom: 1px dashed $primary-color;
+    transition: all 0.5s;
+
+    &:hover {
+        color: $white;
+        background: $primary-color;
+        border-color: $hover-color;
+    }
+
+    &:hover,
+    &:active {
+        outline: 0;
+    }
+}

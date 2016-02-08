@@ -1,5 +1,5 @@
 *:focus {
-  outline: none;
+    outline: none;
 }
 
 input[type="text"],
@@ -15,19 +15,23 @@ input[type="email"],
 input[type="url"],
 input[type="search"],
 input[type="tel"] {
-  background: $gray-lightest;
-  border: 1px solid $gray-light;
-  border-radius: $border-radius;
-  color: $gray-darker;
-  font-size: .9em;
-  padding: 1em;
-  width: 240px;
+    padding: 1em;
+    width: 240px;
+    color: $gray-darker;
+    font-size: 0.9em;
+    background: $gray-lightest;
+    border: 1px solid $gray-light;
+    border-radius: $border-radius;
 
-  @include placeholder {
-    color: $gray;
-  }
+    @include placeholder {
+        color: $gray;
+    }
 
-  &:focus {
-    border-color: $secondary-color;
-  }
+    &:focus {
+        border-color: $secondary-color;
+    }
+}
+
+.label {
+    padding: 8px 18px 9px;
 }

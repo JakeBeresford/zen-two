@@ -1,0 +1,84 @@
+// ------------------------------
+// TYPOGRAPHY
+// ------------------------------
+
+a {
+    color: $link-color;
+    position: relative;
+    text-decoration: none;
+    transition: all $aside-animation-time;
+
+  &:hover {
+      color: $hover-color;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $gray-darkest;
+    font-family: $serif-font;
+    -webkit-font-smoothing: antialiased;
+    font-weight: lighter;
+}
+
+h1 {
+    margin: $margin-h1 0;
+    font-size: $font-h1;
+    line-height: $line-height * 1.75;
+}
+
+h2 {
+    margin: $margin-h2 0;
+    font-size: $font-h2;
+}
+
+h3 {
+    margin: $margin-h3 0;
+    font-size: $font-h3;
+}
+
+h4 {
+    margin: $margin-h4 0;
+    font-size: $font-h4;
+}
+
+h5 {
+    margin: $margin-h5 0;
+    font-size: $font-h5;
+}
+
+h6 {
+    margin: $margin-h6 0;
+    font-size: $font-h6;
+}
+
+p {
+    margin-bottom: 1.3rem;
+    line-height: $line-height;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+blockquote {
+    margin: 2rem 0;
+    padding: 0 0 0 1.5rem;
+    border-left: $gray-darkest 0.25rem solid;
+
+    > p {
+        font-style: italic;
+        font-family: $quote-font;
+        letter-spacing: 0.01rem;
+        word-wrap: break-word;
+        -webkit-font-smoothing: antialiased;
+    }
+}

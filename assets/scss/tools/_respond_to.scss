@@ -1,0 +1,12 @@
+/**
+ * respond-to
+ *
+ * Used to create a media query within a Sass selector. By default this mixin
+ * also defines basic print styles.
+ */
+
+@mixin respond-to($breakpoint) {
+    @media screen and (min-width: $breakpoint), print {
+        @content;
+    }
+}

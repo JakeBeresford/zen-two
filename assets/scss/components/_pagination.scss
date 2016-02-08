@@ -1,19 +1,19 @@
 .pagination {
-  margin: 0 0 2.5rem;
+    margin: 0 0 2.5rem;
 }
 
 .posts {
 
-  &.index {
-    font-size: .8rem;
-    color: $gray-dark;
-  }
+    &.index {
+        color: $gray-dark;
+        font-size: 0.8rem;
+    }
 
-  &.newer {
-    margin-right: 1rem;
-  }
+    &.newer {
+        margin-right: 1rem;
+    }
 
-  &.older {
-    margin-left: 1rem;
-  }
+    &.older {
+        margin-left: 1rem;
+    }
 }

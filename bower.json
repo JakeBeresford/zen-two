@@ -4,14 +4,14 @@
   "homepage": "https://github.com/kikobeats/uno-zen",
   "version": "2.7.3",
   "authors": [
-    "Kiko Beats <josefrancisco.verdu@gmail.com>"
+    "Jake Beresford <hello@jakeberesford.com>"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kikobeats/uno-zen.git"
+    "url": "git+https://github.com/jakeberesford/zen-two.git"
   },
   "bugs": {
-    "url": "https://github.com/Kikobeats/uno-zen/issues"
+    "url": "https://github.com/jakeberesford/zen-two/issues"
   },
   "keywords": [
     "elegant",

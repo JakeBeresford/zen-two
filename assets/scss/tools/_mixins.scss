@@ -1,0 +1,104 @@
+/*------------------------------------*\
+    #MIXINS
+\*------------------------------------*/
+
+@mixin background-filter {
+    background: linear-gradient(150deg, $cover-secondary 30%, $cover-primary 70%) 0 0 / cover fixed;
+}
+
+@mixin center-absolute {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin btn-cover {
+    position: relative;
+    display: block;
+    font-size: 0.9em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    color: $gray-lightest;
+    border-radius: 20px;
+    text-shadow: none;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+@mixin btn-cover-with-border {
+    @include btn-cover;
+    border: 1px solid $gray-lightest;
+}
+
+@mixin placeholder {
+    ::-webkit-input-placeholder {@content}
+    :-moz-placeholder           {@content}
+    ::-moz-placeholder          {@content}
+    :-ms-input-placeholder      {@content}
+}
+
+
+/**
+ * icon-container / icon
+ *
+ * Allows a given selector to recieve an icon in a `:before` or `:after` pseudo-
+ * selector.
+ *
+ * 1. hides any added accessibility text
+ */
+
+@mixin icon($name: $icon-default-name, $size: $icon-default-size, $color: inherit, $hover-color: inherit, $bg-color: none, $placement: before, $modify: false) {
+    @if not $modify {
+        display: inline-block;
+        margin:  0;
+        padding: 0;
+        font-size: 0; /* [1] */
+        text-transform: none;
+        background: $bg-color;
+        border: 0;
+        vertical-align: middle;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &:#{$placement} {
+            display: inline-block;
+            color: $color;
+            font-size: $size;
+            font-style:   normal;
+            font-family:  $icon-font-family;
+            font-weight:  normal;
+            font-variant: normal;
+            line-height: 1;
+            vertical-align: middle;
+
+            @if map-has-key($icon-list, $name) {
+                content: '#{map-get($icon-list, $name)}';
+            }
+            @else {
+                @warn "Cannot find `#{$name}` in the `$icon-list` Sass map variable. Please check your settings.";
+            }
+
+            @content;
+        }
+    }
+    @else {
+        &:#{$placement} {
+            color: $color;
+            font-size: $size;
+
+            @if map-has-key($icon-list, $name) {
+                content: '#{map-get($icon-list, $name)}';
+            }
+            @else {
+                @warn "Cannot find `#{$name}` in the `$icon-list` Sass map variable. Please check your settings.";
+            }
+
+            @content;
+        }
+    }
+}

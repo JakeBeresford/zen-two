@@ -10,51 +10,50 @@ img,
 }
 
 .btn {
-  border: 1px solid $primary-color;
-  border-radius: 20px;
-  color: $primary-color;
-  font-size: .9em;
-  -webkit-font-smoothing: antialiased;
-  font-weight: bold;
-  letter-spacing: 1px;
-  padding: 10px 20px;
-  text-shadow: none;
-
-  &:hover {
-    border-color: darken($primary-color, 15%);
-    color: darken($primary-color, 15%);
-  }
-
-  &.small {
-    font-size: .7em;
-    padding: 8px 12px;
-  }
-
-  &.large {
-    font-size: 1.1em;
-    padding: 10px 24px;
-  }
-
-  &.secondary {
-    border-color: $secondary-color;
-    color: $secondary-color;
+    padding: 10px 20px;
+    color: $primary-color;
+    font-size: 0.9em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: none;
+    border: 1px solid $primary-color;
+    border-radius: 20px;
 
     &:hover {
-      border-color: darken($secondary-color, 15%);
-      color: darken($secondary-color, 15%);
+        color: darken($primary-color, 15%);
+        border-color: darken($primary-color, 15%);
     }
-  }
+
+    &.small {
+        padding: 8px 12px;
+        font-size: 0.7em;
+    }
+
+    &.large {
+        padding: 10px 24px;
+        font-size: 1.1em;
+    }
+
+    &.secondary {
+        color: $secondary-color;
+        border-color: $secondary-color;
+
+        &:hover {
+            color: darken($secondary-color, 15%);
+            border-color: darken($secondary-color, 15%);
+        }
+    }
 }
 
 #menu-button {
-  display: none;
+    display: none;
 
-  > a {
-    > i {
-      color: $gray-lightest;
-      font-size: 36px;
-      position: relative;
-      top: 3px;
+    > a {
+        > i {
+            position: relative;
+            top: 3px;
+            color: $gray-lightest;
+            font-size: 36px;
+        }
     }
-  }
 }

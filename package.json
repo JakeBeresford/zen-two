@@ -1,18 +1,18 @@
 {
-  "name": "uno-zen",
+  "name": "zen-two",
   "description": "Minimalist and Elegant theme for Ghost",
-  "homepage": "https://github.com/kikobeats/uno-zen",
+  "homepage": "https://github.com/jakeberesford/zen-two",
   "version": "2.7.3",
   "author": {
-    "name": "Kiko Beats",
-    "url": "https://github.com/kikobeats"
+    "name": "Jake Beresford",
+    "url": "https://github.com/JakeBeresford"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kikobeats/uno-zen.git"
+    "url": "git+https://github.com/JakeBeresford/zen-two.git"
   },
   "bugs": {
-    "url": "https://github.com/Kikobeats/uno-zen/issues"
+    "url": "https://github.com/JakeBeresford/zen-two/issues"
   },
   "keywords": [
     "elegant",

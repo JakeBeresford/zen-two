@@ -1,146 +1,141 @@
 .cover {
-  position: fixed;
-  z-index: 1;
+    display: block;
+    position: fixed;
+    z-index: 1;
+    width: $aside-width-collapsed;
+    height: 100%;
+    overflow-y: auto;
+    border-right: 1px solid $gray;
+    box-shadow: 10.5px -10px 1px -9px $gray-light;
 
-  display: block;
-  width: $aside-width-collapsed;
-  height: 100%;
-  overflow-y: auto;
-
-  border-right: 1px solid $gray;
-  box-shadow: 10.5px -10px 1px -9px $gray-light;
-
-  &.animated {
-    transition: width $aside-animation-time $aside-animation;
-  }
-  &.expanded {
-    width: 100%;
-
-    .navigation.left {
-      margin-top: .85rem;
-      margin-bottom: 1rem;
+    &.animated {
+        transition: width $aside-animation-time $aside-animation;
     }
-  }
-  &.container {
-    font-weight: $font-weight-thin;
 
-    text-align: center;
+    &.expanded {
+        width: 100%;
 
-    color: $gray-lightest;
+        .navigation.left {
+            margin-top: 0.85rem;
+            margin-bottom: 1rem;
+        }
+    }
 
-    @include font-shadow;
-    @include center-absolute;
-    @include background-filter;
-  }
+    &.container {
+        @include center-absolute;
+        @include background-filter;
+        color: #000000;
+        font-weight: $font-weight-thin;
+        text-align: center;
+    }
 }
 
 #profile-resume {
-  display: none;
+    display: none;
 }
 
 .profile {
-  max-width: 38.75rem;
-  > p {
-    margin: 10px 2rem;
+    max-width: 38.75rem;
 
-    font-size: .9rem;
-  }
-  > a {
-    > h1 {
-      margin: 10px auto;
-
-      font-family: $sans-font;
-      font-size: $unit * 1.6;
-      font-weight: $font-weight-bold;
-
-      letter-spacing: .05rem;
-
-      color: $gray-lightest;
+    > p {
+        margin: 10px 2rem;
+        font-size: 0.9rem;
     }
-    > h3 {
-      margin: 0;
 
-      color: $gray-lightest;
-    }
-    > img {
-      width: 7rem;
+    > a {
+        > h1 {
+            margin: 10px auto;
+            color: $gray-lightest;
+            font-size: $unit * 1.6;
+            font-family: $sans-font;
+            font-weight: $font-weight-bold;
+            letter-spacing: 0.05rem;
+        }
 
-      border: 2px solid rgba($primary-color, .1);
-      box-shadow: 0 0 1px 1px rgba(000, 000, 000, .3);
+        > h3 {
+            margin: 0;
+            color: $gray-lightest;
+        }
+
+        > img {
+            width: 7rem;
+            border: 2px solid rgba($primary-color, 0.1);
+            box-shadow: 0 0 1px 1px rgba(000, 000, 000, 0.3);
+        }
     }
-  }
 }
+
 .navigation {
-  &.left {
-    display: inline-block;
-    .links {
-      margin: 0;
-
-      list-style: none;
-
-      > li {
-        display: block;
-        margin: 0 1px 0 0;
-
-        line-height: 1em;
-
-        &.expanded {
-          display: inline-block;
-          margin: 0 5px;
-
-          border-radius: 20px;
-
-          @include btn-cover-with-border;
-
-          > a {
-            padding: .625rem 1.25rem;
-          }
-        }
-
-        > a {
-          display: block;
-          float: none;
-          padding: .5rem 1.25rem;
-
-          opacity: .8;
-          color: $gray-lightest;
-
-          @include btn-cover;
-
-          &:hover {
-            color: $hover-color;
-          }
-        }
-      }
-    }
-  }
-  &.right {
-    display: block;
-    margin: .5rem;
-    .social {
-      margin: 0;
-      &.item {
+    &.left {
         display: inline-block;
-        margin: 0 4px 0 0;
 
-        line-height: 1em;
-        a {
-          padding: 6px 8px 6px 9px;
+        .links {
+            margin: 0;
+            list-style: none;
 
-          @include btn-cover;
-          .label {
-            display: none;
-          }
-          .icon {
-            display: block;
+            > li {
+                display: block;
+                margin: 0 1px 0 0;
+                line-height: 1em;
 
-            font-size: 1.7em;
-          }
-          &:hover {
-            color: $hover-color;
-          }
+                &.expanded {
+                    @include btn-cover-with-border;
+                    display: inline-block;
+                    margin: 0 5px;
+                    border-radius: 20px;
+
+                    > a {
+                        padding: 0.625rem 1.25rem;
+                    }
+                }
+
+                > a {
+                    @include btn-cover;
+                    display: block;
+                    padding: 0.5rem 1.25rem;
+                    float: none;
+                    color: $gray-darker;
+                    opacity: 0.8;
+
+
+                    &:hover {
+                        color: $hover-color;
+                    }
+                }
+            }
         }
-      }
     }
-  }
+
+    &.right {
+        display: block;
+        margin: 0.5rem;
+
+        .social {
+            margin: 0;
+
+            &.item {
+                display: inline-block;
+                margin: 0 4px 0 0;
+                line-height: 1em;
+
+                a {
+                    @include btn-cover;
+                    padding: 6px 8px 6px 9px;
+
+                    .label {
+                        display: none;
+                    }
+
+                    .icon {
+                        display: block;
+                        font-size: 1.7em;
+                    }
+
+                    &:hover {
+                        color: $hover-color;
+                    }
+                }
+            }
+        }
+    }
 }

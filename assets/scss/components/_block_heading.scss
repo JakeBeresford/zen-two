@@ -1,0 +1,15 @@
+// ------------------------------
+// BLOCK-HEADING
+// ------------------------------
+
+.block-heading {
+    @include column(12);
+    position: relative;
+    bottom: -15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
